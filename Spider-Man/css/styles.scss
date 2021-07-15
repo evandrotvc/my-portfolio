@@ -1,0 +1,50 @@
+* , *::after, *::before {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box; // Respeita o with que é imposto,
+    // Se a caixa tem 100px e coloca padding nos lados de 20px,
+    // logo a caixa irá ter 140px, sendo assim box-sizing,
+    // obriga a caixa sempre ter o 100px , mesmo com padding
+    font-family: 'Mukta', sans-serif;
+}
+
+@mixin responsive {
+    // quando ele atingir 960px de largura de tela
+    // irá rodar executar esse código
+    @media screen and (max-width: 960px){
+        @content
+    }
+}
+
+@import './partials/colors';
+
+img, svg {
+    display: block;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: $white;
+}
+
+.border{
+    border: 1px solid red;
+}
+
+p{
+    font-size: 16px;
+    color: $gray-3;
+    letter-spacing: 1px;
+    line-height: 140%;
+}
+
+@import './partials/layout';
+@import './partials/menu';
+@import './partials/animations';
+@import './partials/spacing';
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: $blue-dark;
+}

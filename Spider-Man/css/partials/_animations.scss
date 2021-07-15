@@ -1,0 +1,27 @@
+.logo-spiderman{
+    fill: transparent;
+    animation: logo-spiderman 12s ease infinite alternate;
+}
+
+// keyframes é propriedade do SVG!
+@keyframes logo-spiderman{
+    // linha do tempo
+    0%{
+        stroke-width: 0; // borda 0
+        // é o efeito de desenhar a aranha
+        stroke-dasharray: 1 100; // 1px de largura de borda com espaçameto de 100
+        fill: transparent;
+    }
+    // 25% do tempo
+    25%{
+        stroke-width: 1;
+        stroke-dasharray: 100 0; // 100px de largura de borda com espaçameto de 0
+        fill: transparent;
+    }
+
+    60%,100%{
+        stroke-width: 0.3;
+        fill: $white-dark;
+    }
+
+}

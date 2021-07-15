@@ -1,0 +1,117 @@
+header{
+    width: 100%;
+    padding-top: 16px;
+    
+}
+
+.navbar {
+    max-width: 1440px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav-list{
+    list-style: none;
+    display: flex;
+
+    li{
+        margin-left: 24px;
+    }
+
+    @include responsive(){
+        display: none;
+    }
+}
+
+.nav-link {
+    display: inline-block;
+    text-decoration: none;
+
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 200;
+
+    padding: 8px 16px;
+
+    color: $gray-3;
+
+    text-transform: uppercase;
+    transition: all .7s ease;
+
+    position: relative;
+
+    // cria a teia ao passar mouse em cima
+    &::after{
+        content: '';
+        display: block;
+        position: absolute;
+        top: -40px;
+        left: 50%;
+
+        margin-top: 8px;
+        width: 4px;
+        height: 0px;
+        border-radius: 2px;
+
+        transform: translate3d(-15%,0,0);
+        transition: .7s ease;
+
+        background: linear-gradient(359.94deg, #E11C21 0.06%, rgba(225, 28, 33, 0) 101.91%);
+    }
+
+    &:hover{
+        color: $white-light;
+
+        &::after{
+            height: 40px;
+        }
+
+    }
+}
+
+.nav-social {
+    display: flex;
+
+    @include responsive(){
+        display: none;
+    }
+
+    svg {
+        margin-left: 16px;
+        width: 30px;
+        cursor: pointer;
+        path{
+            transition: 0.7s ease;
+        }
+
+        &:hover{
+            path{                
+                fill: $red-light;
+                transform: translate3d(0,-3px,0); // joga o elemento pra cima
+            }
+        }
+    }
+}
+
+.bx {
+    display: none;
+
+    @include responsive(){
+        display: block;
+        width: 48px;
+        height: 48px;
+
+        border-radius: 8px;
+        background-color: $white;
+    }
+    
+}
