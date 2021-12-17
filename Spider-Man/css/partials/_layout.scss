@@ -4,7 +4,7 @@
     margin: 0 auto;
     padding: 36px 16px;
 
-    overflow: none;// tira a barra de rolagem, caso estrapole o valor maximo do width
+    overflow: hidden;// tira a barra de rolagem, caso estrapole o valor maximo do width
     height: 85vh;
     display: flex;
     flex-direction: row; // mobile irá mudar para column

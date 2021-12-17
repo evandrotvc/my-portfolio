@@ -31,7 +31,7 @@ p {
   max-width: 1440px;
   margin: 0 auto;
   padding: 36px 16px;
-  overflow: none;
+  overflow: hidden;
   height: 85vh;
   display: -webkit-box;
   display: -ms-flexbox;
