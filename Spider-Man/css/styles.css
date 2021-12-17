@@ -329,6 +329,17 @@ header {
   }
 }
 
+.nav-social img {
+  margin-right: 14px;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.nav-social img:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
 .nav-link {
   display: inline-block;
   text-decoration: none;

@@ -32,6 +32,18 @@ header{
     }
 }
 
+.nav-social{
+    img{
+        margin-right: 14px;
+        transition: all ease 0.3s;
+        &:hover{
+            cursor: pointer;
+            opacity: 0.5;
+        }
+        
+    }
+}
+
 .nav-link {
     display: inline-block;
     text-decoration: none;
